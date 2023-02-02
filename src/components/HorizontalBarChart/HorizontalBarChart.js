@@ -1,17 +1,21 @@
 import './HorizontalBarChart.scss'
 
-import './HorizontalBarChart.scss'
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const HorizontalBarChart = () => {
+  const [data, setData] = useState([]);
   const [showPercent, setShowPercent] = useState(true);
-  const positivePercent = 70;
-  const negativePercent = 30;
-  const positiveTweets = positivePercent * 20;
-  const negativeTweets = negativePercent * 20;
-  const positiveWidth = `${positivePercent}%`;
-  const negativeWidth = `${negativePercent}%`;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios('http://localhost:3001/getStats');
+      setData(result.data);
+      console.log(result.data._id)
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className='horizontalBar_container'>
@@ -22,22 +26,22 @@ const HorizontalBarChart = () => {
         <div className="horizontalBar_legend-text">Negative</div>
       </div>
 
-      <div className="horizontalBar_chart">
-        <div className="horizontalBar_title">JavaScript</div>
-        <div className="horizontalBar_chart-positive" style={{ width: positiveWidth }}>
-          {showPercent ? positivePercent + '%' : positiveTweets + ' tweets'}
+      {data.map((item) => (
+        <div className="horizontalBar_chart">
+          <div className="horizontalBar_title">{item.topic}</div>
+          <div className="horizontalBar_chart-positive" style={{ width: `${item.positivePercent}%` }}>
+            {showPercent ? `${item.positivePercent}%` : `${item.positiveTweets} tweets`}
+          </div>
+          <div className="horizontalBar_chart-negative" style={{ width: `${item.negativePercent}%` }}>
+            {showPercent ? `${item.negativePercent}%` : `${item.negativeTweets} tweets`}
+          </div>
         </div>
-        <div className="horizontalBar_chart-negative" style={{ width: negativeWidth }}>
-          {showPercent ? negativePercent + '%' : negativeTweets + ' tweets'}
-        </div>
-      </div>
-
+      ))}
       <div className="horizontalBar_button">
         <button onClick={() => setShowPercent(true)}>Percent</button>
         <button onClick={() => setShowPercent(false)}>Count</button>
       </div>
     </div>
-
   );
 };
 
