@@ -8,14 +8,13 @@ const HorizontalBarChart = () => {
   const [showPercent, setShowPercent] = useState(true);
   const positivePercent = 70;
   const negativePercent = 30;
-  const positiveCount = positivePercent * 20;
-  const negativeCount = negativePercent * 20;
+  const positiveTweets = positivePercent * 20;
+  const negativeTweets = negativePercent * 20;
   const positiveWidth = `${positivePercent}%`;
   const negativeWidth = `${negativePercent}%`;
 
   return (
     <div className='horizontalBar_container'>
-
       <div className="horizontalBar_legend">
         <div className="horizontalBar_legend-block horizontalBar_legend-positive"></div>
         <div className="horizontalBar_legend-text">Positive</div>
@@ -26,10 +25,10 @@ const HorizontalBarChart = () => {
       <div className="horizontalBar_chart">
         <div className="horizontalBar_title">JavaScript</div>
         <div className="horizontalBar_chart-positive" style={{ width: positiveWidth }}>
-          {showPercent ? positivePercent + '%' : positiveCount + ' tweets'}
+          {showPercent ? positivePercent + '%' : positiveTweets + ' tweets'}
         </div>
         <div className="horizontalBar_chart-negative" style={{ width: negativeWidth }}>
-          {showPercent ? negativePercent + '%' : negativeCount + ' tweets'}
+          {showPercent ? negativePercent + '%' : negativeTweets + ' tweets'}
         </div>
       </div>
 
