@@ -16,6 +16,13 @@ const HorizontalBarChart = () => {
   return (
     <div className='horizontalBar_container'>
 
+      <div className="horizontalBar_legend">
+        <div className="horizontalBar_legend-block horizontalBar_legend-positive"></div>
+        <div className="horizontalBar_legend-text">Positive</div>
+        <div className="horizontalBar_legend-block horizontalBar_legend-negative"></div>
+        <div className="horizontalBar_legend-text">Negative</div>
+      </div>
+
       <div className="horizontalBar_chart">
         <div className="horizontalBar_title">JavaScript</div>
         <div className="horizontalBar_chart-positive" style={{ width: positiveWidth }}>

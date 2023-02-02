@@ -3,6 +3,32 @@
     margin: auto;
 }
 
+.horizontalBar_legend {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.horizontalBar_legend-block {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+.horizontalBar_legend-positive {
+    background-color: #75b5dd;
+}
+
+.horizontalBar_legend-negative {
+    background-color: #e6acb5;
+    margin-left: 200px;
+}
+
+.horizontalBar_legend-text {
+    color: white;
+}
+
 .horizontalBar_chart {
     display: flex;
     flex-direction: row;
