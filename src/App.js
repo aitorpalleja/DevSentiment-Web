@@ -1,11 +1,11 @@
 import './App.css';
 
-import Chart from './components/Chart.js'
+import HorizontalBarChart from './components/HorizontalBarChart/HorizontalBarChart.js'
 
 const App = () => {
   return (
     <div className="App">
-      <Chart></Chart>
+      <HorizontalBarChart></HorizontalBarChart>
     </div>
   );
 };
