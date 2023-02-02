@@ -15,9 +15,9 @@ const HorizontalBarChart = () => {
 
   return (
     <div className='horizontalBar_container'>
-      
+
       <div className="horizontalBar_chart">
-        <div className="horizontalBar_title">Javascript</div>
+        <div className="horizontalBar_title">JavaScript</div>
         <div className="horizontalBar_chart-positive" style={{ width: positiveWidth }}>
           {showPercent ? positivePercent + '%' : positiveCount + ' tweets'}
         </div>
