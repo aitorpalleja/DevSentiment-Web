@@ -15,15 +15,17 @@ const HorizontalBarChart = () => {
 
   return (
     <div className='horizontalBar_container'>
+      
       <div className="horizontalBar_chart">
+        <div className="horizontalBar_title">Javascript</div>
         <div className="horizontalBar_chart-positive" style={{ width: positiveWidth }}>
           {showPercent ? positivePercent + '%' : positiveCount + ' tweets'}
         </div>
         <div className="horizontalBar_chart-negative" style={{ width: negativeWidth }}>
           {showPercent ? negativePercent + '%' : negativeCount + ' tweets'}
         </div>
-
       </div>
+
       <div className="horizontalBar_button">
         <button onClick={() => setShowPercent(true)}>Percent</button>
         <button onClick={() => setShowPercent(false)}>Count</button>

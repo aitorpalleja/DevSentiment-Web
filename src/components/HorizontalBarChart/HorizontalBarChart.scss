@@ -1,9 +1,19 @@
+.horizontalBar_container {
+    max-width: 1440px;
+    margin: auto;
+}
+
 .horizontalBar_chart {
     display: flex;
     flex-direction: row;
     height: 50px;
-    width: 100%;
-    align-items: flex-end;
+    align-items: center;
+    margin-top: 20px;  
+}
+
+.horizontalBar_title {
+    color: white;
+    margin-right: 20px;
 }
 
 .horizontalBar_chart-positive {
