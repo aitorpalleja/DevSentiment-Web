@@ -1,11 +1,13 @@
 import './App.css';
 
-function App() {
+import Chart from './components/Chart.js'
+
+const App = () => {
   return (
     <div className="App">
-
+      <Chart></Chart>
     </div>
   );
-}
+};
 
 export default App;
