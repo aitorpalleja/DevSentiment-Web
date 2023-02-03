@@ -1,0 +1,24 @@
+.home_container {
+    max-width: 700px;
+    color: white;
+    margin: 0 auto;
+    min-height: 100vh;
+
+}
+
+.home_title {
+    font-size: clamp(40px,8vw,70px);
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+
+.home_pharagraph {
+    margin-top: 30px;
+    color: #F8F8F8;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+}
