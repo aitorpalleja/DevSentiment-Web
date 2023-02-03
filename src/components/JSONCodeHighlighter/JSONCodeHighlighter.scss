@@ -1,0 +1,33 @@
+.highlighter_container {
+  background-color: #212529;
+  color: #F8F8F8;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: scroll;
+  height: 300px;
+}
+
+.highlighter_container code {
+  font-size: 18px;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.highlighter_container::-webkit-scrollbar {
+  width: 12px;
+  background-color: #212529;
+}
+
+.highlighter_container::-webkit-scrollbar-thumb {
+  background-color: #F8F8F8;
+  border-radius: 6px;
+}
+
+.highlighter_container::-moz-scrollbar {
+  width: 12px;
+  background-color: #212529;
+}
+
+.highlighter_container::-moz-scrollbar-thumb {
+  background-color: #F8F8F8;
+  border-radius: 6px;
+}

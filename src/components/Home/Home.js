@@ -1,6 +1,10 @@
 import './Home.scss'
-
 import React from 'react';
+
+import JSONCodeHighlighter from '../JSONCodeHighlighter/JSONCodeHighlighter.js';
+
+import code from '../../utils/aiTraining.js'
+
 
 const Home = () => {
   return (
@@ -13,6 +17,8 @@ const Home = () => {
         valuable insights into the current state of the industry, helping 
         developers make informed decisions and stay ahead of the game.
       </p>
+      <JSONCodeHighlighter code={code} />
+
       
     </div>
   );
