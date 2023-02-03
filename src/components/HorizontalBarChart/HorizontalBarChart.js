@@ -11,7 +11,6 @@ const HorizontalBarChart = () => {
     const fetchData = async () => {
       const result = await axios('https://devsentiment.up.railway.app/getStats');
       setData(result.data);
-      console.log(result.data._id)
     };
 
     fetchData();
