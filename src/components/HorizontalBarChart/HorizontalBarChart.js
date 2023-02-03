@@ -9,7 +9,7 @@ const HorizontalBarChart = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios('https://devsentiment.up.railway.app/getStats');
+      const result = await axios('http://localhost:3001/getStats');
       setData(result.data);
     };
 
@@ -25,8 +25,8 @@ const HorizontalBarChart = () => {
         <div className="horizontalBar_legend-text">Negative</div>
       </div>
 
-      {data.map((item) => (
-        <div className="horizontalBar_chart">
+      {data.map((item, index) => (
+        <div className="horizontalBar_chart" key={index}>
           <div className="horizontalBar_title">{item.topic}</div>
           <div className="horizontalBar_chart-positive" style={{ width: `${item.positivePercent}%` }}>
             {showPercent ? `${item.positivePercent}%` : `${item.positiveTweets} tweets`}
