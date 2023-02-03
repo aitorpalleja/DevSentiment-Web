@@ -63,12 +63,13 @@
 }
 
 .navigation_hamburger-button {
+  font-size: 19px;
   border: 0;
   height: 40px;
   width: 40px;
-  padding: 0.5rem;
   border-radius: 50%;
-  background-color: #ffd000d5;
+  background-color: transparent;
+  color: #ffd000;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: absolute;
@@ -76,6 +77,15 @@
   right: 25px;
   transform: translateY(-50%);
   display: none;
+
+
+  &.hamburger-button-close:before {
+    transform: rotate(45deg);
+  }
+
+  &.hamburger-button-close:after {
+    transform: rotate(-45deg);
+  }
 }
 
 
@@ -110,5 +120,13 @@
 
   .navigation_menu.expanded ul {
     display: block;
+  }
+
+  .navigation_hamburger-button.hamburger-button-close {
+
+    &:before,
+    &:after {
+      background-color: #ffd000;
+    }
   }
 }
