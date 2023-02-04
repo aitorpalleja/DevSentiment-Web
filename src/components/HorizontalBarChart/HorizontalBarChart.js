@@ -38,9 +38,14 @@ const HorizontalBarChart = () => {
         </div>
       ))}
       <div className="horizontalBar_button-container">
-        <button className="horizontalBar_button" onClick={() => setShowPercent(true)}>Percent</button>
-        <button className="horizontalBar_button" onClick={() => setShowPercent(false)}>Count</button>
+        <button
+          className={`horizontalBar_button ${showPercent ? 'active' : ''}`}
+          onClick={() => setShowPercent(true)}>Percent</button>
+        <button
+          className={`horizontalBar_button ${!showPercent ? 'active' : ''}`}
+          onClick={() => setShowPercent(false)}>Count</button>
       </div>
+
     </div>
   );
 };

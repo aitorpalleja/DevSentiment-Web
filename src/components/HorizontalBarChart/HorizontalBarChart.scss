@@ -103,34 +103,33 @@
 
 /* CSS */
 .horizontalBar_button {
-  align-items: center;
-  background-color: #212529;
-  border: 1px solid rgb(160, 152, 152);
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  height: 48px;
-  min-width: 140px;
-  outline: 0;
-  margin-bottom: 500px;
+    align-items: center;
+    background-color: #212529;
+    border: 1px solid rgb(160, 152, 152);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    min-width: 140px;
+    outline: 0;
+    margin-bottom: 500px;
 }
-
 
 .horizontalBar_button:hover {
-  border-color: #FFD100;
-  color: #FFD100;
-  fill: #FFD100;
+    border-color: #FFD100;
+    color: #FFD100;
+    fill: #FFD100;
 }
 
-.horizontalBar_button:active {
-  border-color: #FFD100;
-  color: #FFD100;
-  fill: #FFD100;
+.horizontalBar_button.active {
+    border-color: #FFD100;
+    color: #FFD100;
+    fill: #FFD100;
 }
 
 @media (min-width: 768px) {
-  .horizontalBar_button {
-    min-width: 170px;
-  }
+    .horizontalBar_button {
+        min-width: 170px;
+    }
 }
