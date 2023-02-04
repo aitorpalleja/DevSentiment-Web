@@ -7,10 +7,16 @@
 }
 
 .home_title {
-    font-size: clamp(40px,8vw,70px);
+    font-size: clamp(40px, 8vw, 70px);
     margin-bottom: 20px;
     text-align: center;
     margin-top: 100px;
+}
+
+@media screen and (max-width: 790px) {
+    .home_title {
+        margin-top: 40px;
+    }
 }
 
 

@@ -24,7 +24,7 @@ const NavBar = () => {
         }
       >
         <ul>
-          <li className='navigation_li'>
+          <li className='navigation_li' style={isNavExpanded ? {marginTop: "2rem"} : {}}>
             <Link
               activeClass="active"
               to="sentimentanalysis"
@@ -39,7 +39,7 @@ const NavBar = () => {
           <li>
             <Link
               activeClass="active"
-              to="projects"
+              to="jobtrends"
               spy={true}
               smooth={true}
               offset={-70}
@@ -51,7 +51,7 @@ const NavBar = () => {
           <li>
             <Link
               activeClass="active"
-              to="experience"
+              to="spamdetection"
               spy={true}
               smooth={true}
               offset={-70}
