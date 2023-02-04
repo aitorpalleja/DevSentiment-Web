@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
       <NavBar></NavBar>
       <Home></Home>
-      <HorizontalBarChart></HorizontalBarChart>
+      <div id='sentimentanalysis'><HorizontalBarChart></HorizontalBarChart></div>
     </div>
   );
 };
