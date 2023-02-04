@@ -69,8 +69,16 @@
 
 .horizontalBar_topic {
     color: white;
+    font-size: 16px;
     margin-right: 20px;
-    width: 80px;
+    min-width: 65px;
+}
+
+@media screen and (max-width: 790px) {
+    .horizontalBar_topic {
+        font-size: 14px;
+        min-width: 55px;
+    }
 }
 
 .horizontalBar_chart-positive {
