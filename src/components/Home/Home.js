@@ -9,7 +9,7 @@ import code from '../../utils/aiTraining.js'
 const Home = () => {
   return (
     <div className='home_container'>
-      <h1 className='home_title'>Dev Sentiment</h1>
+      <h1 className='home_title'><span className='home_span'>D</span>ev <span className='home_span'>S</span>entiment</h1>
       <p className='home_pharagraph'>
         Dev Sentiment is a project that uses advanced AI technology to 
         analyze and interpret tweets about programming languages and other 

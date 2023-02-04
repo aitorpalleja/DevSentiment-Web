@@ -1,12 +1,39 @@
 .horizontalBar_container {
-    max-width: 1440px;
+    max-width: 1000px;
     margin: auto;
+}
+
+.horizontalBar_title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #FFD100;
+    text-decoration-thickness: 1px;
+    text-align: center;
+}
+
+.horizontalBar_title-span {
+    color: #FFD100;
+}
+
+.horizontalBar_title:hover {
+    color: #FFD100;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: white;
+    text-decoration-thickness: 1px;
+
+    .horizontalBar_title-span {
+        color: white;
+    }
 }
 
 .horizontalBar_legend {
     display: flex;
     align-items: center;
-    margin-top: 20px;
     justify-content: center;
 }
 
@@ -27,7 +54,7 @@
 
 .horizontalBar_legend-text {
     color: white;
-    
+
 }
 
 .horizontalBar_chart {
@@ -35,13 +62,13 @@
     flex-direction: row;
     height: 30px;
     align-items: center;
-    margin-top: 20px;  
+    margin-top: 20px;
 }
 
-.horizontalBar_title {
+.horizontalBar_topic {
     color: white;
     margin-right: 20px;
-    width: 80px;    
+    width: 80px;
 }
 
 .horizontalBar_chart-positive {

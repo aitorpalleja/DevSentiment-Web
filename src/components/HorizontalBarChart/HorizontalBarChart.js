@@ -18,6 +18,7 @@ const HorizontalBarChart = () => {
 
   return (
     <div className='horizontalBar_container'>
+      <div className='horizontalBar_title'><span className='horizontalBar_title-span'>S</span>entiment <span className='horizontalBar_title-span'>A</span>nalysis</div>
       <div className="horizontalBar_legend">
         <div className="horizontalBar_legend-block horizontalBar_legend-positive"></div>
         <div className="horizontalBar_legend-text">Positive</div>
@@ -27,7 +28,7 @@ const HorizontalBarChart = () => {
 
       {data.map((item, index) => (
         <div className="horizontalBar_chart" key={index}>
-          <div className="horizontalBar_title">{item.topic}</div>
+          <div className="horizontalBar_topic">{item.topic}</div>
           <div className="horizontalBar_chart-positive" style={{ width: `${item.positivePercent}%` }}>
             {showPercent ? `${item.positivePercent}%` : `${item.positiveTweets} tweets`}
           </div>
