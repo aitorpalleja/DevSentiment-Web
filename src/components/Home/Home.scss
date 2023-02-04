@@ -28,3 +28,9 @@
     font-weight: 400;
     font-family: "IBM Plex Mono", monospace;
 }
+
+@media screen and (max-width: 790px) {
+    .home_pharagraph {
+        font-size: 16px;
+    }
+}
