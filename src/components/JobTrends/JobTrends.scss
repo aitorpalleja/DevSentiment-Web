@@ -1,10 +1,14 @@
 .jobTrends_container {
-    display: flex;
     max-width: 1000px;
     margin: auto;
     margin-top: 100px;
-    justify-content: center;
+
+}
+
+.jobTrends_title-container {
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .jobTrends_title-text {
@@ -17,6 +21,7 @@
     text-underline-offset: 6px;
     text-decoration-color: #FFD100;
     text-decoration-thickness: 1px;
+
 }
 
 .jobTrends_title-text:hover {
@@ -31,4 +36,29 @@
 
 .jobTrends_title-span {
     color: #FFD100;
+}
+
+.jobTrends_chart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    height: 30px;
+}
+
+.jobTrends_topic {
+    color: white;
+    font-size: 16px;
+    margin-right: 20px;
+    min-width: 65px;
+}
+
+.jobTrends_bar {
+    background-color: #75b5ddb6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+
 }
