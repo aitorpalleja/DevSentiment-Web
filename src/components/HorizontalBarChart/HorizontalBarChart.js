@@ -19,12 +19,17 @@ const HorizontalBarChart = () => {
   return (
     <div className='horizontalBar_container'>
       <div className='horizontalBar_title'><span className='horizontalBar_title-span'>S</span>entiment <span className='horizontalBar_title-span'>A</span>nalysis</div>
-      <div className="horizontalBar_legend">
-        <div className="horizontalBar_legend-block horizontalBar_legend-positive"></div>
-        <div className="horizontalBar_legend-text">Positive</div>
-        <div className="horizontalBar_legend-block horizontalBar_legend-negative"></div>
-        <div className="horizontalBar_legend-text">Negative</div>
-      </div>
+      <table class="horizontalBar_legend">
+        <tr>
+          <td class="horizontalBar_legend-block-positive"></td>
+          <th class="horizontalBar_legend-text">Positive</th>
+        </tr>
+        <tr>
+          <td class="horizontalBar_legend-block-negative"></td>
+          <th class="horizontalBar_legend-text">Negative</th>
+        </tr>
+      </table>
+
 
       {data.map((item, index) => (
         <div className="horizontalBar_chart" key={index}>

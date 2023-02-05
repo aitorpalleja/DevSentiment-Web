@@ -35,29 +35,33 @@
 
 .horizontalBar_legend {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-.horizontalBar_legend-block {
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
-}
-
-.horizontalBar_legend-positive {
+.horizontalBar_legend-block-positive {
     background-color: #75b5ddb6;
+    width: 15px;
 }
 
-.horizontalBar_legend-negative {
+.horizontalBar_legend-block-negative {
     background-color: #e6acb5a2;
-    margin-left: 200px;
+    width: 15px;
+    
 }
 
 .horizontalBar_legend-text {
     color: white;
-
 }
+
+
+@media screen and (max-width: 790px) {
+    .horizontalBar_legend {
+        flex-direction: row;
+        font-size: 14px;
+        justify-content: center;        
+    }
+}
+
 
 .horizontalBar_chart {
     display: flex;
@@ -90,6 +94,12 @@
     color: white;
 }
 
+@media screen and (max-width: 790px) {
+    .horizontalBar_chart-positive {
+        font-size: 14px;
+    }
+}
+
 .horizontalBar_chart-negative {
     background-color: #e6acb5a2;
     display: flex;
@@ -97,6 +107,12 @@
     justify-content: center;
     height: 100%;
     color: white;
+}
+
+@media screen and (max-width: 790px) {
+    .horizontalBar_chart-negative {
+        font-size: 14px;
+    }
 }
 
 .horizontalBar_button-container {
