@@ -3,7 +3,7 @@ import './JobTrends.scss'
 import React from 'react';
 
 const data = [
-    { language: 'JavaScript', jobOffers: 1000 },
+    { language: 'Javascript', jobOffers: 500 },
     { language: 'Python', jobOffers: 450 },
     { language: 'Java', jobOffers: 400 },
     { language: 'C#', jobOffers: 350 },
