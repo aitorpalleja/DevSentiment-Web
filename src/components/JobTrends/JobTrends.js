@@ -14,6 +14,13 @@ const data = [
     { language: 'C++', jobOffers: 300 },
 ];
 
+const maxJobOffers = Math.max(...data.map(item => item.jobOffers));
+const step = Math.ceil(maxJobOffers / 4);
+
+const axisData = Array(5)
+    .fill(0)
+    .map((_, index) => index * step);
+
 
 const JobTrends = () => {
     return (
@@ -35,7 +42,13 @@ const JobTrends = () => {
                     />
                 </div>
             ))}
-
+            <div className='jobTrends_axis-container'>
+                {axisData.map((item, index) => (
+                    <span className='jobTrends_axis-item' key={index}>
+                        {item}
+                    </span>
+                ))}
+            </div>
         </div>
     )
 };
