@@ -39,19 +39,22 @@ const HorizontalBarChart = () => {
 
       {data.map((item, index) => (
         <div className="horizontalBar_chart" key={index}>
-          <div className="horizontalBar_topic">{item.topic}</div>
-          <div className="horizontalBar_chart-positive" 
-          style={{ width: `${item.positivePercent}%` }}
-          title={`There are ${item.positiveTweets} positive tweets talking about ${item.topic} in the last 24 hours.`}
+          <div className="horizontalBar_topic">
+            <span className="first-letter">{item.topic.charAt(0)}</span>
+            {item.topic.substring(1)}
+          </div>
+          <div className="horizontalBar_chart-positive"
+            style={{ width: `${item.positivePercent}%` }}
+            title={`There are ${item.positiveTweets} positive tweets talking about ${item.topic} in the last 24 hours.`}
 
           >
             {showPercent ? `${item.positivePercent}%` : `${item.positiveTweets} tweets`}
           </div>
-          <div className="horizontalBar_chart-negative" 
-          style={{ width: `${item.negativePercent}%` }}
-          title={`There are ${item.negativeTweets} negative tweets talking about ${item.topic} in the last 24 hours.`}
+          <div className="horizontalBar_chart-negative"
+            style={{ width: `${item.negativePercent}%` }}
+            title={`There are ${item.negativeTweets} negative tweets talking about ${item.topic} in the last 24 hours.`}
 
-          
+
           >
             {showPercent ? `${item.negativePercent}%` : `${item.negativeTweets} tweets`}
           </div>

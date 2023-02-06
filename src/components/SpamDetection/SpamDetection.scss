@@ -51,7 +51,7 @@
 }
 
 .spamDetection_topic {
-    color: white;
+    color: #FFFFFF;
     font-size: 16px;
     margin-right: 20px;
     min-width: 75px;
@@ -90,4 +90,8 @@
 .spamDetection_axis-item {
     color: white;
     font-size: 14px;
+}
+
+.spamDetection_axis-item:first-child {
+    opacity: 0;
 }

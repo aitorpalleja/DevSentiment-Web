@@ -35,16 +35,19 @@ const JobTrends = () => {
                     </span>
                 </h3>
             </div>
-            
+
             <h4 className='jobTrends_data-source'><span className='jobTrends_title-span'>J</span>ob offers from the last <span className='jobTrends_title-span'>24 hours</span>:</h4>
 
             <div className="jobTrends_chart-container">
                 {data.map((item, index) => (
                     <div className="jobTrends_chart" key={index}>
-                        <div className="jobTrends_topic">{item.topic}</div>
-                        <div className="jobTrends_chart-positive" 
-                        style={{ width: `${(item.jobOffers / maxSpam) * containerWidth}px` }}
-                        title={`There are ${item.jobOffers} job offers for ${item.topic} developers in the last 24 hours.`}
+                        <div className="jobTrends_topic">
+                            <span className="first-letter">{item.topic.charAt(0)}</span>
+                            {item.topic.substring(1)}
+                        </div>
+                        <div className="jobTrends_chart-positive"
+                            style={{ width: `${(item.jobOffers / maxSpam) * containerWidth}px` }}
+                            title={`There are ${item.jobOffers} job offers for ${item.topic} developers in the last 24 hours.`}
 
                         >
                             {`${item.jobOffers} `}

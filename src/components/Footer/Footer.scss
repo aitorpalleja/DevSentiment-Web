@@ -7,14 +7,6 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 1000px) {
-    .footer_container {
-        margin-left: 20px;
-        margin-right: 20px;
-
-    }
-}
-
 .footer_icon {
     display: flex;
     flex-direction: row;
