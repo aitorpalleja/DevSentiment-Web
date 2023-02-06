@@ -48,14 +48,14 @@ const HorizontalBarChart = () => {
             title={`There are ${item.positiveTweets} positive tweets talking about ${item.topic} in the last 24 hours.`}
 
           >
-            {showPercent ? `${item.positivePercent}%` : `${item.positiveTweets} tweets`}
+            {showPercent ? `${item.positivePercent}%` : `${item.positiveTweets}`}
           </div>
           {item.negativeTweets > 0 && (
             <div className="horizontalBar_chart-negative"
               style={{ width: `${item.negativePercent}%` }}
               title={`There are ${item.negativeTweets} negative tweets talking about ${item.topic} in the last 24 hours.`}
             >
-              {showPercent ? `${item.negativePercent}%` : `${item.negativeTweets} tweets`}
+              {showPercent ? `${item.negativePercent}%` : `${item.negativeTweets}`}
             </div>
           )}
         </div>
