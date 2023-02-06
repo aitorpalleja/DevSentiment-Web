@@ -36,7 +36,7 @@ const JobTrends = () => {
                 </h3>
             </div>
             
-            <h4 className='jobTrends_data-source'><span className='jobTrends_title-span'>D</span>ata from the last <span className='jobTrends_title-span'>24 hours</span>:</h4>
+            <h4 className='jobTrends_data-source'><span className='jobTrends_title-span'>J</span>ob offers from the last <span className='jobTrends_title-span'>24 hours</span>:</h4>
 
             <div className="jobTrends_chart-container">
                 {data.map((item, index) => (
