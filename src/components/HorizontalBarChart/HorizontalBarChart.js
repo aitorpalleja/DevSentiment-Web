@@ -18,7 +18,12 @@ const HorizontalBarChart = () => {
 
   return (
     <div className='horizontalBar_container'>
-      <div className='horizontalBar_title'><span className='horizontalBar_title-span'>S</span>entiment <span className='horizontalBar_title-span'>A</span>nalysis</div>
+      <div className='horizontalBar_title-container'>
+        <h3 className='horizontalBar_title-text'>
+          <span className='horizontalBar_title-span'>S</span>entiment&nbsp;
+          <span className='horizontalBar_title-span'>A</span>nalysis
+        </h3>
+      </div>
       <table className="horizontalBar_legend">
         <tr>
           <td className="horizontalBar_legend-block-positive"></td>
