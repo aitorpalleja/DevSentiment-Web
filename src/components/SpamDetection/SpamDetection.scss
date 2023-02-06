@@ -37,3 +37,54 @@
 .spamDetection_title-span {
     color: #FFD100;
 }
+
+.spamDetection_chart {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.spamDetection_topic {
+    color: white;
+    font-size: 16px;
+    margin-right: 20px;
+    min-width: 75px;
+}
+
+@media screen and (max-width: 790px) {
+    .spamDetection_topic {
+        font-size: 14px;
+        min-width: 60px;
+    }
+}
+
+.spamDetection_chart-positive {
+    background-color: #75b5ddb6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+}
+
+@media screen and (max-width: 790px) {
+    .spamDetection_chart-positive {
+        font-size: 14px;
+    }
+}
+
+.spamDetection_axis-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .spamDetection_axis-item {
+    color: white;
+    font-size: 14px;
+  }
+  
