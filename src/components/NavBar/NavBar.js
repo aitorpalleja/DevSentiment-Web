@@ -3,7 +3,7 @@ import './NavBar.scss'
 import { useState } from "react";
 import { Link } from "react-scroll";
 
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.webp'
 
 const NavBar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
