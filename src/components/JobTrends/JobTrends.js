@@ -42,7 +42,11 @@ const JobTrends = () => {
                 {data.map((item, index) => (
                     <div className="jobTrends_chart" key={index}>
                         <div className="jobTrends_topic">{item.topic}</div>
-                        <div className="jobTrends_chart-positive" style={{ width: `${(item.jobOffers / maxSpam) * containerWidth}px` }}>
+                        <div className="jobTrends_chart-positive" 
+                        style={{ width: `${(item.jobOffers / maxSpam) * containerWidth}px` }}
+                        title={`There are ${item.jobOffers} job offers for ${item.topic} developers in the last 24 hours.`}
+
+                        >
                             {`${item.jobOffers} `}
                         </div>
                     </div>

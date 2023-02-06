@@ -41,7 +41,11 @@ const SpamDetection = () => {
                 {data.map((item, index) => (
                     <div className="spamDetection_chart" key={index}>
                         <div className="spamDetection_topic">{item.topic}</div>
-                        <div className="spamDetection_chart-positive" style={{ width: `${(item.spamTweets / maxSpam) * containerWidth}px` }}>
+                        <div className="spamDetection_chart-positive" 
+                        style={{ width: `${(item.spamTweets / maxSpam) * containerWidth}px` }}
+                        title={`There are ${item.spamTweets} spam tweets mentioning ${item.topic} in the last 24 hours.`}
+
+                        >
                             {`${item.spamTweets} `}
                         </div>
                     </div>
