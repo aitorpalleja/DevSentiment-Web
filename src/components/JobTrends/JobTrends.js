@@ -8,7 +8,7 @@ const JobTrends = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios('http://localhost:3001/getJobOfferCount');
+            const result = await axios('https://devsentiment.up.railway.app/getJobOfferCount');
             setData(result.data);
         };
 
