@@ -19,6 +19,11 @@ const SpamDetection = () => {
     }, []);
 
     const maxSpam = Math.max(...data.map(item => item.spamTweets));
+    const step = Math.ceil(maxSpam / 4);
+
+    const axisData = Array(5)
+        .fill(0)
+        .map((_, index) => index * step);
 
     return (
         <div className='spamDetection_container'>
@@ -41,6 +46,14 @@ const SpamDetection = () => {
                     </div>
                 ))}
             </div>
+            <div className='spamDetection_axis-container'>
+                {axisData.map((item, index) => (
+                    <span className='spamDetection_axis-item' key={index}>
+                        {item}
+                    </span>
+                ))}
+            </div>
+
         </div>
     )
 };
