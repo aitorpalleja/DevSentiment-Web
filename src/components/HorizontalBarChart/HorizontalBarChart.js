@@ -20,7 +20,6 @@ const HorizontalBarChart = () => {
     <div className='horizontalBar_container'>
       <div className='horizontalBar_title'><span className='horizontalBar_title-span'>S</span>entiment <span className='horizontalBar_title-span'>A</span>nalysis</div>
       <table className="horizontalBar_legend">
-        <tbody>
         <tr>
           <td className="horizontalBar_legend-block-positive"></td>
           <th className="horizontalBar_legend-text">Positive</th>
@@ -29,7 +28,6 @@ const HorizontalBarChart = () => {
           <td className="horizontalBar_legend-block-negative"></td>
           <th className="horizontalBar_legend-text">Negative</th>
         </tr>
-        </tbody>
       </table>
 
 
