@@ -35,6 +35,7 @@ const SpamDetection = () => {
                     </span>
                 </h3>
             </div>
+            <h4 className='horizontalBar_data-source'><span className='spamDetection_title-span'>D</span>ata from the last <span className='spamDetection_title-span'>24 hours</span>:</h4>
 
             <div className="spamDetection_chart-container">
                 {data.map((item, index) => (

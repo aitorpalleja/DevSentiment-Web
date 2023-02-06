@@ -24,6 +24,7 @@ const HorizontalBarChart = () => {
           <span className='horizontalBar_title-span'>A</span>nalysis
         </h3>
       </div>
+      <h4 className='horizontalBar_data-source'><span className='horizontalBar_title-span'>D</span>ata from the last <span className='horizontalBar_title-span'>24 hours</span>:</h4>
       <table className="horizontalBar_legend">
         <tr>
           <td className="horizontalBar_legend-block-positive"></td>
