@@ -9,7 +9,7 @@ const HorizontalBarChart = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios('https://devsentiment.up.railway.app/getStats');
+      const result = await axios('http://localhost:3001/getStats');
       setData(result.data);
     };
 
