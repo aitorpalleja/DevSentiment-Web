@@ -2,9 +2,16 @@
     max-width: 700px;
     color: white;
     margin: 0 auto;
-    min-height: calc(94vh - 90px);
+    min-height: calc(94vh - 130px);
 
 }
+
+@media screen and (max-width: 790px) {
+    .home_container {
+        min-height: calc(94vh - 40px);
+    }
+}
+
 
 .home_title {
     font-size: clamp(40px, 8vw, 70px);
@@ -16,6 +23,7 @@
 .home_span {
     color: #FFD100;
 }
+
 
 @media screen and (max-width: 790px) {
     .home_title {
