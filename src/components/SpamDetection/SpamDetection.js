@@ -5,7 +5,6 @@ import axios from 'axios';
 
 const SpamDetection = () => {
     const [data, setData] = useState([]);
-    const [containerWidth, setContainerWidth] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -15,7 +14,6 @@ const SpamDetection = () => {
 
         fetchData();
 
-        setContainerWidth(document.querySelector(".spamDetection_chart-container").offsetWidth);
     }, []);
 
     const maxSpam = Math.max(...data.map(item => item.spamTweets));
@@ -35,7 +33,7 @@ const SpamDetection = () => {
                     </span>
                 </h3>
             </div>
-            <h4 className='horizontalBar_data-source'><span className='spamDetection_title-span'>D</span>ata from the last <span className='spamDetection_title-span'>24 hours</span>:</h4>
+            <h4 className='horizontalBar_data-source'><span className='spamDetection_title-span'>S</span>pam tweets from the last <span className='spamDetection_title-span'>24 hours</span>:</h4>
 
             <div className="spamDetection_chart-container">
                 {data.map((item, index) => (
@@ -45,8 +43,8 @@ const SpamDetection = () => {
                             {item.topic.substring(1)}
                         </div>                        
                         <div className="spamDetection_chart-positive" 
-                        style={{ width: `${(item.spamTweets / maxSpam) * containerWidth}px` }}
-                        title={`There are ${item.spamTweets} spam tweets mentioning ${item.topic} in the last 24 hours.`}
+                            style={{ width: `${(item.spamTweets / maxSpam) * 100}%` }}
+                            title={`There are ${item.spamTweets} spam tweets mentioning ${item.topic} in the last 24 hours.`}
 
                         >
                             {`${item.spamTweets} `}

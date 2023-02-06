@@ -5,7 +5,6 @@ import axios from 'axios';
 
 const JobTrends = () => {
     const [data, setData] = useState([]);
-    const [containerWidth, setContainerWidth] = useState(0);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -15,7 +14,6 @@ const JobTrends = () => {
 
         fetchData();
 
-        setContainerWidth(document.querySelector(".jobTrends_chart-container").offsetWidth);
     }, []);
 
     const maxSpam = Math.max(...data.map(item => item.jobOffers));
@@ -46,9 +44,8 @@ const JobTrends = () => {
                             {item.topic.substring(1)}
                         </div>
                         <div className="jobTrends_chart-positive"
-                            style={{ width: `${(item.jobOffers / maxSpam) * containerWidth}px` }}
+                            style={{ width: `${(item.jobOffers / maxSpam) * 100}%` }}
                             title={`There are ${item.jobOffers} job offers for ${item.topic} developers in the last 24 hours.`}
-
                         >
                             {`${item.jobOffers} `}
                         </div>
