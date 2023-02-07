@@ -6,6 +6,7 @@ import HorizontalBarChart from './components/HorizontalBarChart/HorizontalBarCha
 import JobTrends from './components/JobTrends/JobTrends';
 import SpamDetection from './components/SpamDetection/SpamDetection';
 import Footer from './components/Footer/Footer';
+import Contact from './components/Contact/Contact';
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
       <div id='sentimentanalysis'><HorizontalBarChart></HorizontalBarChart></div>
       <div id='jobtrends'><JobTrends></JobTrends></div>
       <div id='spamdetection'><SpamDetection></SpamDetection></div>
+      <Contact></Contact>
       <Footer></Footer>
     </div>
   );

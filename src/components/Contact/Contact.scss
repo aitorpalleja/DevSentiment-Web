@@ -1,0 +1,116 @@
+.contact_container {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.contact_title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact_title-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: #FFD100;
+    text-decoration-thickness: 1px;
+}
+
+.contact_title-text:hover {
+    text-decoration-color: white;
+    color: #FFD100;
+
+    .contact_title-span {
+        color: white;
+    }
+}
+
+
+.contact_title-span {
+    color: #FFD100;
+}
+
+.contact_pharagraph {
+    color: #F8F8F8;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "IBM Plex Mono", monospace;
+}
+
+.contact_input {
+    color: white;
+    font-size: 18px;
+    //border-radius: 5px;
+    background-color: #212529;
+    border: 1px solid white;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact_button {
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #212529;
+    border: 1px solid white;
+    //border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    transition: all 0.3s;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+.contact_button:hover {
+    color: #FFD100;
+    border: 1px solid #FFD100;
+
+}
+
+.contact_alert {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 800px;
+
+}
+
+.contact_alert-good {
+    background-color: #FFD100;
+    padding: 10px;
+    width: 200px;
+    align-items: center;
+    margin-top: 50px;
+    position: absolute;
+
+}
+
+.contact_alert-error {
+    background-color: #FFD100;
+    padding: 10px;
+    width: 300px;
+    align-items: center;
+    position: absolute;
+    margin-top: 30px;
+    border: solid 2px rgb(255, 196, 2);
+}
