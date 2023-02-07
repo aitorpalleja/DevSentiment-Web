@@ -15,7 +15,7 @@ const Home = () => {
       of the tech industry. It leverages the Twitter API to gather tweets 
       about programming languages and other relevant topics, 
       and uses <span className='home_span'>co:here AI</span> technology to analyze and interpret the 
-      sentiment expressed in these tweets.
+      sentiment expressed in the tweets.
       </p>
       <JSONCodeHighlighter code={code} />
     </div>
