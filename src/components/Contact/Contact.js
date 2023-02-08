@@ -40,10 +40,6 @@ function Contact() {
           </span>
         </h3>
       </div>
-      <p className='contact_pharagraph'>¡Hola! Si hay gente de la comunidad interesada podemos hacer más grande
-        el proyecto, mejorarlo, analizar frameworks, nuevas tecnologías...
-        Puede ser divertido para ver los datos a final de año y
-        trabajar en equipo. Podéis hablarme aquí o por discord Aitor#7282. ¡Nos vemos!</p>
       <form ref={form} onSubmit={sendEmail}>
         <input className='contact_input' type="text" name="user_name" placeholder='Name' required />
         <input className='contact_input' type="email" name="user_email" placeholder='Email' required />
