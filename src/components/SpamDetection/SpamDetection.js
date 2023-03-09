@@ -8,7 +8,7 @@ const SpamDetection = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios('https://devsentiment.up.railway.app/getSpamCount');
+            const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getSpamCount');
             setData(result.data);
         };
 

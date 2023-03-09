@@ -9,7 +9,7 @@ const HorizontalBarChart = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios('https://devsentiment.up.railway.app/getStats');
+      const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getStats');
       setData(result.data);
     };
 
