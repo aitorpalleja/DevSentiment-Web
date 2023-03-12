@@ -5,15 +5,22 @@ import axios from 'axios';
 
 const JobTrends = () => {
     const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getJobOfferCount');
-            setData(result.data);
+            try {
+                const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getJobOfferCount');
+                setData(result.data);
+            } catch (error) {
+                console.log(error)
+            } finally {
+                setIsLoading(false)
+            }
         };
 
         fetchData();
-
     }, []);
 
     const maxSpam = Math.max(...data.map(item => item.jobOffers));
@@ -24,43 +31,49 @@ const JobTrends = () => {
         .map((_, index) => index * step);
 
     return (
-        <div className='jobTrends_container'>
-            <div className='jobTrends_title-container'>
-                <h3 className='jobTrends_title'>
-                    <span className='jobTrends_title-text'>
-                        <span className='jobTrends_title-span'>J</span>obs&nbsp;
-                        <span className='jobTrends_title-span'>T</span>rends
-                    </span>
-                </h3>
-            </div>
-
-            <h4 className='jobTrends_data-source'><span className='jobTrends_title-span'>J</span>ob offers from the last <span className='jobTrends_title-span'>24 hours</span>:</h4>
-
-            <div className="jobTrends_chart-container">
-                {data.map((item, index) => (
-                    <div className="jobTrends_chart" key={index}>
-                        <div className="jobTrends_topic">
-                            <span className="first-letter">{item.topic.charAt(0)}</span>
-                            {item.topic.substring(1)}
-                        </div>
-                        <div className="jobTrends_chart-positive"
-                            style={{ width: `${(item.jobOffers / maxSpam) * 100}%` }}
-                            title={`There are ${item.jobOffers} job offers for ${item.topic} developers in the last 24 hours.`}
-                        >
-                            {`${item.jobOffers} `}
-                        </div>
+        <>
+            {isLoading ? (
+                <p className='horizontalBar_loader'>Loading...</p>
+            ) : (
+                <div className='jobTrends_container'>
+                    <div className='jobTrends_title-container'>
+                        <h3 className='jobTrends_title'>
+                            <span className='jobTrends_title-text'>
+                                <span className='jobTrends_title-span'>J</span>obs&nbsp;
+                                <span className='jobTrends_title-span'>T</span>rends
+                            </span>
+                        </h3>
                     </div>
-                ))}
-            </div>
-            <div className='jobTrends_axis-container'>
-                {axisData.map((item, index) => (
-                    <span className='jobTrends_axis-item' key={index}>
-                        {item}
-                    </span>
-                ))}
-            </div>
 
-        </div>
+                    <h4 className='jobTrends_data-source'><span className='jobTrends_title-span'>J</span>ob offers from the last <span className='jobTrends_title-span'>24 hours</span>:</h4>
+
+                    <div className="jobTrends_chart-container">
+                        {data.map((item, index) => (
+                            <div className="jobTrends_chart" key={index}>
+                                <div className="jobTrends_topic">
+                                    <span className="first-letter">{item.topic.charAt(0)}</span>
+                                    {item.topic.substring(1)}
+                                </div>
+                                <div className="jobTrends_chart-positive"
+                                    style={{ width: `${(item.jobOffers / maxSpam) * 100}%` }}
+                                    title={`There are ${item.jobOffers} job offers for ${item.topic} developers in the last 24 hours.`}
+                                >
+                                    {`${item.jobOffers} `}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className='jobTrends_axis-container'>
+                        {axisData.map((item, index) => (
+                            <span className='jobTrends_axis-item' key={index}>
+                                {item}
+                            </span>
+                        ))}
+                    </div>
+
+                </div>
+            )}
+        </>
     )
 };
 

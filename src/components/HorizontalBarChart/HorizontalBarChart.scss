@@ -4,6 +4,13 @@
     //margin-top: 180px;
 }
 
+.horizontalBar_loader {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .horizontalBar_title-container {
     display: flex;
     align-items: center;
@@ -54,7 +61,7 @@
 .horizontalBar_legend-block-negative {
     background-color: #ffd0003b;
     width: 15px;
-    
+
 }
 
 .horizontalBar_legend-text {
@@ -66,7 +73,7 @@
     .horizontalBar_legend {
         flex-direction: row;
         font-size: 14px;
-        justify-content: center;        
+        justify-content: center;
     }
 }
 
@@ -93,7 +100,7 @@
     }
 }
 
-.horizontalBar_topic:hover{
+.horizontalBar_topic:hover {
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-color: #FFD100;
