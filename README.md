@@ -1,1 +1,1 @@
-Server: https://github.com/Aitor-bot/DevSentiment-Server
+Backend: https://github.com/Aitor-bot/DevSentiment-Server
