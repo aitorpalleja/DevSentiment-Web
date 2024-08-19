@@ -8,21 +8,26 @@ const SpamDetection = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setData(hardcodedData);
+    const sortedData = hardcodedData.sort(
+      (a, b) => b.spamTweets - a.spamTweets
+    );
+    setData(sortedData);
     setIsLoading(false);
 
-    /*const fetchData = async () => {
-           try {
-             const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getSpamCount');
-             setData(result.data);
-           } catch (error) {
-             console.log(error)
-           } finally {
-             setIsLoading(false)
-           }
-         };
+    /* 
+    const fetchData = async () => {
+       try {
+         const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getSpamCount');
+         setData(result.data);
+       } catch (error) {
+         console.log(error)
+       } finally {
+         setIsLoading(false)
+       }
+     };
 
-         fetchData(); */
+     fetchData();
+    */
   }, []);
 
   const maxSpam = Math.max(...data.map((item) => item.spamTweets));

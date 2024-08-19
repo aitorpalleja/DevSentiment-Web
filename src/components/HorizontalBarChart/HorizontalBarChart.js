@@ -2,28 +2,32 @@ import './HorizontalBarChart.scss';
 import React, { useState, useEffect } from 'react';
 // import axios from 'axios';
 import hardcodedData from '../../data/data.json';
+
 const HorizontalBarChart = () => {
   const [data, setData] = useState([]);
   const [showPercent, setShowPercent] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setData(hardcodedData);
+    const sortedData = hardcodedData.sort((a, b) => b.totalTweets - a.totalTweets);
+    setData(sortedData);
     setIsLoading(false);
 
-     /*const fetchData = async () => {
-       try {
-         const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getStats');
-         setData(result.data);
-       } catch (error) {
-         console.log(error);
-       } finally {
-         setIsLoading(false)
-       }
-     };
+    /* 
+    const fetchData = async () => {
+      try {
+        const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getStats');
+        setData(result.data);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false)
+      }
+    };
 
-     fetchData();*/
-  }, []); 
+    fetchData();
+    */
+  }, []);
 
   return (
     <>
@@ -37,7 +41,9 @@ const HorizontalBarChart = () => {
               <span className='horizontalBar_title-span'>A</span>nalysis
             </h3>
           </div>
-          <h4 className='horizontalBar_data-source'><span className='horizontalBar_title-span'>O</span>riginal tweets from the last <span className='horizontalBar_title-span'>24 hours</span>:</h4>
+          <h4 className='horizontalBar_data-source'>
+            <span className='horizontalBar_title-span'>O</span>riginal tweets from the last <span className='horizontalBar_title-span'>24 hours</span>:
+          </h4>
           <table className="horizontalBar_legend">
             <tr>
               <td className="horizontalBar_legend-block-positive"></td>

@@ -8,21 +8,24 @@ const JobTrends = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setData(hardcodedData);
+    const sortedData = hardcodedData.sort((a, b) => b.jobOffers - a.jobOffers);
+    setData(sortedData);
     setIsLoading(false);
 
-    /*const fetchData = async () => {
-           try {
-             const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getJobOfferCount');
-             setData(result.data);
-           } catch (error) {
-             console.log(error)
-           } finally {
-             setIsLoading(false)
-           }
-         };
+    /* 
+    const fetchData = async () => {
+       try {
+         const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getJobOfferCount');
+         setData(result.data);
+       } catch (error) {
+         console.log(error)
+       } finally {
+         setIsLoading(false)
+       }
+     };
 
-         fetchData(); */
+     fetchData();
+    */
   }, []);
 
   const maxJobOffers = Math.max(...data.map((item) => item.jobOffers));
@@ -48,8 +51,7 @@ const JobTrends = () => {
           </div>
 
           <h4 className="jobTrends_data-source">
-            <span className="jobTrends_title-span">J</span>ob offers from the
-            last <span className="jobTrends_title-span">24 hours</span>:
+            <span className="jobTrends_title-span">J</span>ob offers from the last <span className="jobTrends_title-span">24 hours</span>:
           </h4>
 
           <div className="jobTrends_chart-container">
