@@ -1,14 +1,16 @@
 import "./JobTrends.scss";
 import React, { useState, useEffect } from "react";
 // import axios from 'axios';
-import hardcodedData from "../../data/data.json"; 
+import hardcodedData from "../../data/data.json";
 
 const JobTrends = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const sortedData = hardcodedData.sort((a, b) => b.jobOffers - a.jobOffers);
+    const sortedData = [...hardcodedData].sort(
+      (a, b) => b.jobOffers - a.jobOffers
+    );
     setData(sortedData);
     setIsLoading(false);
 
@@ -51,7 +53,8 @@ const JobTrends = () => {
           </div>
 
           <h4 className="jobTrends_data-source">
-            <span className="jobTrends_title-span">J</span>ob offers from the last <span className="jobTrends_title-span">24 hours</span>:
+            <span className="jobTrends_title-span">J</span>ob offers from the
+            last <span className="jobTrends_title-span">24 hours</span>:
           </h4>
 
           <div className="jobTrends_chart-container">

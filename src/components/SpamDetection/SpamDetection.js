@@ -8,7 +8,7 @@ const SpamDetection = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const sortedData = hardcodedData.sort(
+    const sortedData = [...hardcodedData].sort(
       (a, b) => b.spamTweets - a.spamTweets
     );
     setData(sortedData);
