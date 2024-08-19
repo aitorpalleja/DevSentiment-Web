@@ -9,11 +9,12 @@ const HorizontalBarChart = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const sortedData = hardcodedData.sort((a, b) => b.totalTweets - a.totalTweets);
+    // Creamos una copia de los datos y luego los ordenamos por totalTweets
+    const sortedData = [...hardcodedData].sort((a, b) => b.totalTweets - a.totalTweets);
     setData(sortedData);
     setIsLoading(false);
 
-    /* 
+    /*
     const fetchData = async () => {
       try {
         const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getStats');
