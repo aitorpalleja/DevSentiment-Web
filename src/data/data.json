@@ -1,0 +1,157 @@
+[
+    {
+      "_id": "63e0b25189b327710678798a",
+      "topic": "Python",
+      "positiveTweets": 1894,
+      "negativeTweets": 196,
+      "totalTweets": 2091,
+      "positivePercent": 90.6,
+      "negativePercent": 9.4,
+      "jobOffers": 341,
+      "spamTweets": 1442
+    },
+    {
+      "_id": "63e0b2900acdac28e09c5574",
+      "topic": "Java",
+      "positiveTweets": 669,
+      "negativeTweets": 41,
+      "totalTweets": 711,
+      "positivePercent": 94.1,
+      "negativePercent": 5.8,
+      "jobOffers": 214,
+      "spamTweets": 318
+    },
+    {
+      "_id": "63e0b77aaf57dd6b5272330c",
+      "topic": "JavaScript",
+      "positiveTweets": 3209,
+      "negativeTweets": 429,
+      "totalTweets": 3639,
+      "positivePercent": 88.2,
+      "negativePercent": 11.8,
+      "jobOffers": 562,
+      "spamTweets": 1533
+    },
+    {
+      "_id": "63e1129d5c95dc47ca0dff54",
+      "topic": "TypeScript",
+      "positiveTweets": 414,
+      "negativeTweets": 125,
+      "totalTweets": 540,
+      "positivePercent": 76.7,
+      "negativePercent": 23.1,
+      "jobOffers": 128,
+      "spamTweets": 62
+    },
+    {
+      "_id": "63e1464a85d09445432b546b",
+      "topic": "PHP",
+      "positiveTweets": 433,
+      "negativeTweets": 28,
+      "totalTweets": 462,
+      "positivePercent": 93.7,
+      "negativePercent": 6.1,
+      "jobOffers": 180,
+      "spamTweets": 438
+    },
+    {
+      "_id": "63e14c81c6a6d36b593e98c5",
+      "topic": "Swift",
+      "positiveTweets": 55,
+      "negativeTweets": 9,
+      "totalTweets": 65,
+      "positivePercent": 84.6,
+      "negativePercent": 13.8,
+      "jobOffers": 7,
+      "spamTweets": 52
+    },
+    {
+      "_id": "63e150f7abed96b7fac92bc1",
+      "topic": "Kotlin",
+      "positiveTweets": 139,
+      "negativeTweets": 21,
+      "totalTweets": 161,
+      "positivePercent": 86.3,
+      "negativePercent": 13,
+      "jobOffers": 41,
+      "spamTweets": 47
+    },
+    {
+      "_id": "63e15350abed96b7fac92fdd",
+      "topic": "Perl",
+      "positiveTweets": 73,
+      "negativeTweets": 3,
+      "totalTweets": 77,
+      "positivePercent": 94.8,
+      "negativePercent": 3.9,
+      "jobOffers": 13,
+      "spamTweets": 31
+    },
+    {
+      "_id": "63e1545a347345eb2662056b",
+      "topic": "Golang",
+      "positiveTweets": 252,
+      "negativeTweets": 28,
+      "totalTweets": 281,
+      "positivePercent": 89.7,
+      "negativePercent": 10,
+      "jobOffers": 90,
+      "spamTweets": 234
+    },
+    {
+      "_id": "63e1613c3fbf9e51ba728be9",
+      "topic": "Ruby",
+      "positiveTweets": 283,
+      "negativeTweets": 41,
+      "totalTweets": 325,
+      "positivePercent": 87.1,
+      "negativePercent": 12.6,
+      "jobOffers": 57,
+      "spamTweets": 77
+    },
+    {
+      "_id": "63e16694610316b5c9731bf9",
+      "topic": "Solidity",
+      "positiveTweets": 1177,
+      "negativeTweets": 72,
+      "totalTweets": 1250,
+      "positivePercent": 94.2,
+      "negativePercent": 5.8,
+      "jobOffers": 39,
+      "spamTweets": 534
+    },
+    {
+      "_id": "63e173a865663f7f8ad535bf",
+      "topic": "Dart",
+      "positiveTweets": 51,
+      "negativeTweets": 0,
+      "totalTweets": 52,
+      "positivePercent": 100,
+      "negativePercent": 0,
+      "jobOffers": 0,
+      "spamTweets": 37
+    },
+    {
+      "_id": "63e173f6f3cc03393cb9aabd",
+      "topic": "Rust",
+      "positiveTweets": 169,
+      "negativeTweets": 32,
+      "totalTweets": 202,
+      "positivePercent": 83.7,
+      "negativePercent": 15.8,
+      "jobOffers": 14,
+      "spamTweets": 96
+    },
+    {
+      "_id": "63e184f85c04e0c70ebf2009",
+      "topic": "C#",
+      "positiveTweets": 345,
+      "negativeTweets": 84,
+      "totalTweets": 430,
+      "positivePercent": 80.2,
+      "negativePercent": 19.5,
+      "jobOffers": 159,
+      "spamTweets": 592
+    }
+  ]
+  

@@ -1,28 +1,29 @@
-import './HorizontalBarChart.scss'
-
+import './HorizontalBarChart.scss';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-
+// import axios from 'axios';
+import hardcodedData from '../../data/data.json';
 const HorizontalBarChart = () => {
   const [data, setData] = useState([]);
   const [showPercent, setShowPercent] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
-
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getStats');
-        setData(result.data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setIsLoading(false)
-      }
-    };
+    setData(hardcodedData);
+    setIsLoading(false);
 
-    fetchData();
-  }, []);
+     /*const fetchData = async () => {
+       try {
+         const result = await axios('https://drab-cyan-perch-tutu.cyclic.app/getStats');
+         setData(result.data);
+       } catch (error) {
+         console.log(error);
+       } finally {
+         setIsLoading(false)
+       }
+     };
+
+     fetchData();*/
+  }, []); 
 
   return (
     <>
@@ -30,7 +31,6 @@ const HorizontalBarChart = () => {
         <p className='horizontalBar_loader'>Loading...</p>
       ) : (
         <div className='horizontalBar_container'>
-
           <div className='horizontalBar_title-container'>
             <h3 className='horizontalBar_title-text'>
               <span className='horizontalBar_title-span'>S</span>entiment&nbsp;
@@ -49,7 +49,6 @@ const HorizontalBarChart = () => {
             </tr>
           </table>
 
-
           {data.map((item, index) => (
             <div className="horizontalBar_chart" key={index}>
               <div className="horizontalBar_topic">
@@ -59,7 +58,6 @@ const HorizontalBarChart = () => {
               <div className="horizontalBar_chart-positive"
                 style={{ width: `${item.positivePercent}%` }}
                 title={`There are ${item.positiveTweets} positive tweets talking about ${item.topic} in the last 24 hours.`}
-
               >
                 {showPercent ? `${item.positivePercent}%` : `${item.positiveTweets}`}
               </div>
